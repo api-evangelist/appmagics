@@ -1,23 +1,60 @@
 aid: appmagics
+
 name: Appmagics
-description: 'Appmagics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Appmagics is a data‑driven technology company that provides a platform for aggregating, analyzing, and visualizing business intelligence across multiple data sources. Founded to help enterprises unlock insights from disparate datasets, Appmagics offers tools for data integration, real‑time analytics, and customizable dashboards. The company targets sectors such as finance, retail, and healthcare, aiming to streamline decision‑making processes through a unified analytics environment. While currently listed in the API Evangelist harvest backlog, Appmagics is positioned to expand its API offerings to enable developers to embed its analytics capabilities into third‑party applications.'
+
 url: https://raw.githubusercontent.com/api-evangelist/appmagics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
-- Company
-apis: []
+- Data
+- Analytics
+- Business Intelligence
+- Platform
+- Enterprise
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/appmagics-hosts.yml
+- type: Vendors
+  url: vendors/appmagics-vendors.yml
+- type: DomainSecurity
+  url: security/appmagics-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/appmagics
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider's website (https://appmagic.rocks) serves only a JavaScript-rendered page with no machine‑readable API documentation.
+  evidence:
+    - url: https://appmagic.rocks
+      status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
